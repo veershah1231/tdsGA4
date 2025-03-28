@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '30 2 * * *'  # Runs daily at 02:30 UTC
+    - cron: '30 2 * * *'  # Runs daily at specified time
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
@@ -15,10 +15,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Configure Git (23f1001524@ds.study.iitm.ac.in)
+      - name: Configure Git (example@ds.study.iitm.ac.in)
         run: |
           git config --global user.name "GitHub Action"
-          git config --global user.email "23f1001524@ds.study.iitm.ac.in"
+          git config --global user.email "example@ds.study.iitm.ac.in"
 
       - name: Make a Change
         run: |
