@@ -1,10 +1,10 @@
 name: Daily Commit for 23f3000709@ds.study.iitm.ac.in
 
 on:
-  push:{}
+  push:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at specified time
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '30 2 * * *'  # Runs daily at specified time
+  workflow_dispatch:
 
 permissions:
   contents: write  # Ensure GitHub Actions can push changes
@@ -16,17 +16,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Configure Git with (23f3000709@ds.study.iitm.ac.in)
+      - name: Configure Git for 23f3000709@ds.study.iitm.ac.in
         run: |
-          git config --global user.name "GitHub Action"
+          git config --global user.name "23f3000709@ds.study.iitm.ac.in"
           git config --global user.email "23f3000709@ds.study.iitm.ac.in"
 
-      - name: Make a Change
+      - name: Make a Change for 23f3000709@ds.study.iitm.ac.in
         run: |
-          echo "Last run: $(date)" by 23f3000709@ds.study.iitm.ac.in > last_run.txt  # Always modify the file
+          echo "Last run: $(date) by 23f3000709@ds.study.iitm.ac.in" > last_run.txt  # Include email in the file
 
-      - name: Commit and Push Changes
+      - name: Commit and Push Changes for 23f3000709@ds.study.iitm.ac.in
         run: |
           git add last_run.txt
-          git commit -m "Automated daily commit at $(date)" by 23f3000709@ds.study.iitm.ac.in || echo "No changes to commit"
+          git commit -m "Automated daily commit at $(date) by 23f3000709@ds.study.iitm.ac.in" || echo "No changes to commit"
           git push
