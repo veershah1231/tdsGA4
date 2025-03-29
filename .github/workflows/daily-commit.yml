@@ -1,8 +1,9 @@
 name: Daily Commit for 23f3000709@ds.study.iitm.ac.in
 
 on:
+    push:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at specified time
+    - cron: '0 12 * * *'  # Runs daily at specified time
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
