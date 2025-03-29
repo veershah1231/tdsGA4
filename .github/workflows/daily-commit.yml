@@ -1,7 +1,7 @@
 name: Daily Commit for 23f3000709@ds.study.iitm.ac.in
 
 on:
-  push:
+  push:{}
   schedule:
     - cron: '0 0 * * *'  # Runs daily at specified time
   workflow_dispatch:  # Allows manual triggering
@@ -28,5 +28,5 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add last_run.txt
-          git commit -m "Automated daily commit at $(date)" by23f3000709@ds.study.iitm.ac.in || echo "No changes to commit"
+          git commit -m "Automated daily commit at $(date)" by 23f3000709@ds.study.iitm.ac.in || echo "No changes to commit"
           git push
